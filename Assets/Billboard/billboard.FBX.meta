@@ -1,34 +1,15 @@
 fileFormatVersion: 2
-guid: b8833d926d23eaf4c9ed9a8e0ca8bcde
+guid: 20fd816a83c48484c8fee8a7ae243377
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: CINEMA_4D_Editor
-    100002: Connect
-    100004: Crystals
-    100006: //RootNode
-    100008: Crystals_2
-    100010: Light
-    400000: CINEMA_4D_Editor
-    400002: Connect
-    400004: Crystals
-    400006: //RootNode
-    400008: Crystals_2
-    400010: Light
-    2000000: CINEMA_4D_Editor
-    2100000: No Name
-    2300000: Connect
-    3300000: Connect
-    4300000: Connect
-    9500000: //RootNode
-    10800000: Light
-    2186277476908879412: ImportLogs
+    4300000: Box002
   externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
-    materialLocation: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -54,13 +35,13 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 0.01
     meshCompression: 0
     addColliders: 0
-    importVisibility: 1
+    importVisibility: 0
     importBlendShapes: 1
-    importCameras: 1
-    importLights: 1
+    importCameras: 0
+    importLights: 0
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
@@ -68,17 +49,17 @@ ModelImporter:
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
-    indexFormat: 0
+    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 1
+    useFileScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
-    tangentImportMode: 3
-    normalCalculationMode: 4
+    tangentImportMode: 4
+    normalCalculationMode: 0
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
@@ -98,7 +79,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 1
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
