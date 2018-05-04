@@ -18,6 +18,7 @@ public class AccelerometerMove : MonoBehaviour {
        // transform.Translate(temp * speed * Time.deltaTime, 0, 0);
        // transform.Translate(Input.acceleration.x * Time.smoothDeltaTime * 10, 0, 0);
 
-        transform.Translate(new Vector2(Input.acceleration.x, 0) * Time.deltaTime * 10f);
+   //     transform.Translate(new Vector2(Input.acceleration.x, 0) * Time.deltaTime * 10f);
+        transform.Translate(new Vector3(Input.acceleration.x * 10f, 0, speed) * Time.deltaTime);
     }
 }
