@@ -6,7 +6,7 @@ public class CameraMovement : MonoBehaviour {
 
     private Transform lookAt;
     private Vector3 startOffset;
-    private float transition = 0.0f;
+ //   private float transition = 0.0f;
    // private float animationDuration = 2.0f;
     public float speed = 5.0f;
 

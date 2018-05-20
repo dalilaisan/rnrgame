@@ -6,13 +6,13 @@ public class TileManager : MonoBehaviour {
 
     public GameObject[] tilePrefabs;
     private Transform playerTransform;
-    private float spawnZ = -10.0f;
-    private float tileLength = 35.0f;
+    private float spawnZ = -35.0f;
+    private float tileLength = 70.0f;
     private float amnTilesOnScreen = 2;
-    private float safeZone = 15.0f;
+    private float safeZone = 40.0f;
     private List<GameObject> activeTiles;
     //to randomize:
-    //private int lastPrefabIndex = 0;
+    private int lastPrefabIndex = 0;
 
 	// Use this for initialization
 	private void Start () {
@@ -20,8 +20,10 @@ public class TileManager : MonoBehaviour {
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         for(int i=0; i < amnTilesOnScreen; i++)
         {
-            spawnTile();
-            deleteTile();
+            if (i < 2)
+                spawnTile(0);
+            else
+                spawnTile();
         }
 	}
 	
@@ -30,13 +32,14 @@ public class TileManager : MonoBehaviour {
 		if(playerTransform.position.z - safeZone > (spawnZ - amnTilesOnScreen * tileLength))
         {
             spawnTile();
+            deleteTile();
         }
 	}
 
     private void spawnTile(int prefabIndex = -1)
     {
         GameObject go;
-        go = Instantiate(tilePrefabs[0]) as GameObject;
+        go = Instantiate( tilePrefabs [randomPrefabIndex()] ) as GameObject;
         go.transform.SetParent(transform);
         go.transform.position = Vector3.forward * spawnZ;
         spawnZ += tileLength;
@@ -47,5 +50,18 @@ public class TileManager : MonoBehaviour {
     {
         Destroy(activeTiles[0]);
         activeTiles.RemoveAt(0);
+    }
+
+    private int randomPrefabIndex()
+    {
+        if (tilePrefabs.Length <= 1)
+            return 0;
+        int randomIndex = lastPrefabIndex;
+        while(randomIndex == lastPrefabIndex)
+        {
+            randomIndex = Random.Range(0, tilePrefabs.Length);
+        }
+        lastPrefabIndex = randomIndex;
+        return randomIndex;
     }
 }
