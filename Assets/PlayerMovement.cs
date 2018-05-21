@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour {
 
     private CharacterController controller;
-    public float speed = 5.0f;
+    public float speed = 8.0f;
     private bool isDead = false;
 
 	// Use this for initialization
@@ -32,4 +32,9 @@ public class PlayerMovement : MonoBehaviour {
   //  {
     //    isDead = true;
    // }
+
+    public void setSpeed(float modifier)
+    {
+        speed = 8.0f + modifier;
+    }
 }

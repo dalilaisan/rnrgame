@@ -315,6 +315,7 @@ GameObject:
   - component: {fileID: 603556837}
   - component: {fileID: 603556839}
   - component: {fileID: 603556838}
+  - component: {fileID: 603556841}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -379,7 +380,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 603556832}
   m_LocalRotation: {x: 0.078459114, y: 0, z: 0, w: 0.99691737}
-  m_LocalPosition: {x: 0, y: 1.9, z: 28.8}
+  m_LocalPosition: {x: 0, y: 1.11, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -427,6 +428,19 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &603556841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 603556832}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8ef68eade16c464ca9b1ca6b0920929, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  glitchShader: {fileID: 4800000, guid: 20fb88352075f4028be8d9e9c5412abd, type: 3}
+  rend: {fileID: 0}
 --- !u!1 &620507742
 GameObject:
   m_ObjectHideFlags: 0
@@ -441,6 +455,7 @@ GameObject:
   - component: {fileID: 620507748}
   - component: {fileID: 620507743}
   - component: {fileID: 620507749}
+  - component: {fileID: 620507750}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Player
@@ -520,7 +535,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 620507742}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.6, z: 35}
+  m_LocalPosition: {x: 0, y: 0.29, z: 0}
   m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_Children: []
   m_Father: {fileID: 0}
@@ -555,6 +570,17 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &620507750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 620507742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c38c0dd07bbbea7469109998c6d388db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &950475565
 Prefab:
   m_ObjectHideFlags: 0
@@ -572,7 +598,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4058278274714674, guid: 76be1ad2e1f92f345a93869295534a22, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 4058278274714674, guid: 76be1ad2e1f92f345a93869295534a22, type: 2}
       propertyPath: m_LocalRotation.x
