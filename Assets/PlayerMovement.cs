@@ -21,20 +21,21 @@ public class PlayerMovement : MonoBehaviour {
         controller.Move(Vector3.forward * Time.deltaTime * speed);
 	}
 
-    //Called whenever our player hits something
-   // private void OnControllerColliderHit(ControllerColliderHit hit)
-   // {
-   //     if (hit.point.z > transform.position.z + controller.radius)
-   //         Death();
-  //  }
-
-//    private void Death()
-  //  {
-    //    isDead = true;
-   // }
-
     public void setSpeed(float modifier)
     {
         speed = 8.0f + modifier;
+    }
+
+    //this is being called every time our capsule hits something
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if (hit.point.z > transform.position.z + controller.radius)
+            Death();
+    }
+
+    private void Death()
+    {
+        isDead = true;
+        GetComponent<Score>().onDeath();
     }
 }

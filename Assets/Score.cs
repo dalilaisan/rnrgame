@@ -10,6 +10,7 @@ public class Score : MonoBehaviour {
     private int difficultyLevel = 1;
     private int maxDifficultyLevel = 10;
     private int scoreToNextLevel = 10;
+    private bool isDead = false;
     
    public Text scoreText;
 
@@ -20,6 +21,8 @@ public class Score : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+        if (isDead) return;
 
         if (score >= scoreToNextLevel)
         {
@@ -40,5 +43,10 @@ public class Score : MonoBehaviour {
         GetComponent<PlayerMovement>().setSpeed(difficultyLevel);
 
         Debug.Log(difficultyLevel);
+    }
+
+    public void onDeath()
+    {
+        isDead = true;
     }
 }
